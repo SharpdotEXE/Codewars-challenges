@@ -31,8 +31,6 @@ def shorten_to_date(long_date):
 
             month = long_date[long_date.index(i) + 1:]
 
-
-
     for j in month:
 
         if j.isspace():
@@ -43,20 +41,17 @@ def shorten_to_date(long_date):
 
     for i in long_date:
 
+
         try:
             i = int(i)
             day = str(i)
+
             break
         except:
             pass
 
+    end_result = weekday + ' ' + month + ' ' + day
 
-    return weekday, month, day
+    return end_result
 
-
-
-
-
-
-
-print(shorten_to_date("Monday February 2, 8pm"))
+print(shorten_to_date("Tuesday January 29, 10pm"))
