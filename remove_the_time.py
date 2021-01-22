@@ -24,33 +24,26 @@ Assume shortenToDate's output will be the shortened string, e.g., "Friday May 2"
 
 def shorten_to_date(long_date):
     for i in long_date:
-
         if i == ' ':
 
             weekday = long_date[:long_date.index(i)]
-
             month = long_date[long_date.index(i) + 1:]
 
     for j in month:
-
         if j.isspace():
 
             month = month[:month.index(j)]
-
             break
 
     for i in long_date:
-
-
         try:
+            
             i = int(i)
             day = str(i)
 
             try:
-
+                
                 q = int(long_date[long_date.index(day):long_date.index(day) + 2])
-
-
                 day = str(q)
 
             except:
