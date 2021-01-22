@@ -57,6 +57,3 @@ def shorten_to_date(long_date):
     end_result = weekday + ' ' + month + ' ' + day
 
     return end_result
-
-print(shorten_to_date("Tuesday January 29, 10pm"))
-
