@@ -31,21 +31,21 @@ def shorten_to_date(long_date):
 
             month = long_date[long_date.index(i) + 1:]
 
-    print(month)
+
 
     for j in month:
 
         if j.isspace():
 
-            month = month[:long_date.index(j)]
-            print(month)
+            month = month[:month.index(j)]
+
             break
 
     for i in long_date:
 
         try:
             i = int(i)
-            day = i
+            day = str(i)
             break
         except:
             pass
