@@ -2,7 +2,7 @@
 creator - radiocontrolled
 
 
-(incomplete)
+(completed)
 
 
 You're re-designing a blog and the blog's posts have the following format for
@@ -18,7 +18,9 @@ Assume shortenToDate's output will be the shortened string, e.g., "Friday May 2"
 """
 
 
-
+### I slightly misread the sample tests and it ended up making it a lot harder
+### for me but I still managed to get the solution even if there is a suffix on 
+### the day, such as "2nd" 
 
 def shorten_to_date(long_date):
     for i in long_date:
@@ -44,7 +46,18 @@ def shorten_to_date(long_date):
             i = int(i)
             day = str(i)
 
+            try:
+
+                q = int(long_date[long_date.index(day):long_date.index(day) + 2])
+
+
+                day = str(q)
+
+            except:
+                pass
+
             break
+
         except:
             pass
 
@@ -53,3 +66,4 @@ def shorten_to_date(long_date):
     return end_result
 
 print(shorten_to_date("Tuesday January 29, 10pm"))
+
