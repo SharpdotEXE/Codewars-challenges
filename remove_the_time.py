@@ -31,12 +31,27 @@ def shorten_to_date(long_date):
 
             month = long_date[long_date.index(i) + 1:]
 
+    print(month)
+
+    for j in month:
+
+        if j.isspace():
+
+            month = month[:long_date.index(j)]
+            print(month)
+            break
+
+    for i in long_date:
+
+        try:
+            i = int(i)
+            day = i
+            break
+        except:
+            pass
 
 
-
-
-
-    return weekday, month
+    return weekday, month, day
 
 
 
