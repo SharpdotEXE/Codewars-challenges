@@ -2,7 +2,7 @@
 creator - jayeshcp
 
 
-(incomplete)
+(completed)
 
 
 Return the number (count) of vowels in the given string.
@@ -14,10 +14,8 @@ The input string will only consist of lower case letters and/or spaces.
 
 def get_count(input_str):
     num_vowels = 0
-    vowels = ['a', 'e', 'i', 'o', 'u']
     for letter in input_str:
-        if letter in vowels:
+        if letter in 'aeiouAEIOU':
             num_vowels += 1
 
     return num_vowels
-
