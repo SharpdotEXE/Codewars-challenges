@@ -42,15 +42,13 @@ def shorten_to_date(long_date):
             day = str(i)
 
             try:
-                
                 q = int(long_date[long_date.index(day):long_date.index(day) + 2])
                 day = str(q)
-
             except:
                 pass
 
             break
-
+            
         except:
             pass
 
