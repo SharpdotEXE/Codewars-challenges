@@ -27,3 +27,4 @@ Output string must be two numbers separated by a single space, and highest numbe
 
 def high_and_low(numbers):
     return f'{sorted([int(i) for i in numbers.split()])[-1]} {sorted([int(i) for i in numbers.split()])[0]}'
+
