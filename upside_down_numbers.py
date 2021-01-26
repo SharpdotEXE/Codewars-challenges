@@ -14,3 +14,12 @@ Given a range, return the count of upside down numbers within that range.
 For example, solve(0,10) = 3, because there are only 3 upside down 
 numbers >= 0 and < 10. They are 0, 1, 8.
 """
+
+def solve(a, b):
+
+
+    for i in range(a, b):
+
+
+        if int(str(i)[0]) in [0, 1, 6, 8, 9]:
+            return i
